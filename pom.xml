@@ -6,7 +6,7 @@
 
     <groupId>me.fredde.mc</groupId>
     <artifactId>LocalChat</artifactId>
-    <version>1.0</version>
+    <version>1.0.0-beta</version>
     <packaging>jar</packaging>
 
     <name>LocalChat</name>
