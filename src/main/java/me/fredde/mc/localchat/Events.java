@@ -16,6 +16,7 @@ public class Events implements Listener {
         event.setCancelled(true);
 
         Player player = event.getPlayer();
+        // TODO: Use getFormat() and replace arguments.
         String message = "<" + player.getName() + "> " + event.getMessage();
 
         player.sendMessage(message);
