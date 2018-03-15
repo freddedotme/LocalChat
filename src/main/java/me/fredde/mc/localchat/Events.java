@@ -11,6 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Events implements Listener {
+    private List<Player> locals;
+
+    Events() {
+        locals = new ArrayList<>();
+    }
+
     @EventHandler
     public void onAsyncPlayerChat(AsyncPlayerChatEvent event) {
         event.setCancelled(true);
@@ -24,11 +30,11 @@ public class Events implements Listener {
         for (Player local : getLocalPlayers(player.getLocation())) {
             local.sendMessage(message);
         }
+
+        locals.clear();
     }
 
     private List<Player> getLocalPlayers(Location location) {
-        List<Player> locals = new ArrayList<>();
-
         for (Player player : Bukkit.getOnlinePlayers()) {
             double distance = player.getLocation().distance(location);
 
