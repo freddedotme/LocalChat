@@ -26,14 +26,14 @@ public class Events implements Listener {
 
         player.sendMessage(message);
 
-        for (Player local : getLocalPlayers(player.getLocation())) {
+        for (Player local : getLocals(player.getLocation())) {
             local.sendMessage(message);
         }
 
         locals.clear();
     }
 
-    private List<Player> getLocalPlayers(Location location) {
+    private List<Player> getLocals(Location location) {
         for (Player player : Bukkit.getOnlinePlayers()) {
             double distance = player.getLocation().distance(location);
 
