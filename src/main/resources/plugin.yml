@@ -1,0 +1,6 @@
+name: LocalChat
+version: ${project.version}
+main: me.fredde.mc.localchat.Main
+prefix: [LC]
+authors: [freddedotme]
+description: More realistic chat.
