@@ -18,6 +18,8 @@ public class Events implements Listener {
         Player player = event.getPlayer();
         String message = "<" + player.getName() + "> " + event.getMessage();
 
+        player.sendMessage(message);
+
         for (Player local : getLocalPlayers(player.getLocation())) {
             local.sendMessage(message);
         }
